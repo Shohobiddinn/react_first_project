@@ -1,34 +1,24 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Button from './components/Button/button'
+import Item from './components/Item/Item'
 import './App.css'
 
 export default function App() {
   const [count, setCount] = useState(0)
-
+  const data = [
+    { name: 'sh', link: 'youtube.com' },
+    { name: 'sh', link: 'youtube.com' },
+    { name: 'sh', link: 'youtube.com' },
+    { name: 'sssh', link: 'youtube.com' },
+    { name: 'sh', link: 'youtube.com' },
+    { name: 'sh', link: 'youtube.com' },
+    { name: 'sh', link: 'youtube.com' },
+    { name: 'sh', link: 'youtube.com' },
+    { name: 'sh', link: 'youtube.com' },
+    { name: 'sh', link: 'youtube.com' },
+  ]
   return (
     <>
-      <div>
-      <Button onClick={() => setCount((count) => count + 1)} >
-      djcdn</Button>
-        <img src={viteLogo} className="logo" alt="Vite logo" />
-
-        <img src={reactLogo} className="logo react" alt="React logo" />
-
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button >
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+<Item data={data}/>
     </>
   )
 }
